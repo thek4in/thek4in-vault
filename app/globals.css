@@ -4,48 +4,66 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
-    --primary: 262.1 83.3% 57.8%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 262.1 83.3% 57.8%;
+    --background: 200 19.4% 87.8%; /* background */
+    --foreground: 210 50% 3.9%; /* text */
+
+    --card: 200 19.4% 87.8%; /* --background */
+    --card-foreground: 210 50% 3.9%; /* --foreground */
+
+    --popover: 200 19.4% 87.8%; /* --background */
+    --popover-foreground: 210 50% 3.9%; /* --foreground */
+
+    --primary: 197.7 79.8% 17.5%; /* --primary */
+    --primary-foreground: 200 19.4% 87.8%; /* --background */
+
+    --secondary: 195.8 12.9% 71.2%; /* --secondary */
+    --secondary-foreground: 210 50% 3.9%; /* --foreground */
+
+    --muted: 195.8 12.9% 71.2%; /* --secondary */
+    --muted-foreground: 201.2 12.1% 27.6%; /* --foreground */
+
+    --accent: 195.8 12.9% 71.2%; /* --secondary */
+    --accent-foreground: 210 50% 3.9%; /* --foreground */
+
+    --destructive: 5.1 100% 65.1%; /* --destructive */
+    --destructive-foreground: 210 50% 3.9%; /* --foreground */
+
+    --border: 210 50% 3.9%; /* --foreground */
+    --input: 210 50% 3.9%; /* --foreground */
+    --ring: 197.7 79.8% 17.5%; /* --primary */
+
     --radius: 0rem;
   }
 
   .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 263.4 70% 50.4%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 263.4 70% 50.4%;
+    --background: 213.3 52.9% 3.3%; /* background */
+    --foreground: 200 19.4% 87.8%; /* text */
+
+    --card: 213.3 52.9% 3.3%; /* --background */
+    --card-foreground: 200 19.4% 87.8%; /* --foreground */
+
+    --popover: 213.3 52.9% 3.3%; /* --background */
+    --popover-foreground: 200 19.4% 87.8%; /* --foreground */
+
+    --primary: 198.2 57.4% 30.4%; /* --primary */
+    --primary-foreground: 213.3 52.9% 3.3%; /* --background */
+    --primary-foreground: 200 19.4% 87.8%; /* --background */
+
+    --secondary: 201.2 45.9% 14.5%; /* --secondary */
+    --secondary-foreground: 200 19.4% 87.8%; /* --foreground */
+
+    --muted: 201.2 45.9% 14.5%; /* --secondary */
+    --muted-foreground: 201.2 12.1% 27.6%; /* --muted-foreground */
+
+    --accent: 201.2 45.9% 14.5%; /* --secondary */
+    --accent-foreground: 200 19.4% 87.8%; /* --foreground */
+
+    --destructive: 4.9 80.4% 36.1%; /* --destructive */
+    --destructive-foreground: 200 19.4% 87.8%; /* --foreground */
+
+    --border: 200 19.4% 87.8%; /* --foreground */
+    --input: 200 19.4% 87.8%; /* --foreground */
+    --ring: 198.2 57.4% 30.4%; /* --primary */
   }
 }
 
@@ -57,3 +75,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* 
+foreground: Dark Text color. Darkmode needs to be Bright
+background: Bright Background Color. Darkmode needs to be Dark.
+
+Dark-Foreground can be the same color as Normal-Background and vice versa.
+
+primary: A unique color. The bright color should be slightly lighter than the darkmode color.
+secondary: Should be closely related to the background color. Normal should be slightly darker, Darkmode should be slightly lighter.
+
+destructive: Red color for Alert messages. Darkmode should be slightly darker.
+
+
+*/
