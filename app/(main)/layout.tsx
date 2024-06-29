@@ -1,26 +1,44 @@
 import { ReactNode } from 'react';
 
-import { ModeToggle } from '@/components/mode-toggle';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import {
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from '@/components/ui/command';
+
+import Header from '@/components/header';
 
 export default function MainPage({ children }: { children: ReactNode }) {
   return (
     <>
-      {/* TODO!! Why is it not changing color when changing modes? */}
-      <header className="bg-background shrink-0 border-b border-b-foreground h-16 px-10 flex items-center justify-between sticky top-0 z-10">
-        <div>[LOGO]</div>
-        <div className="flex gap-6">
-          <ModeToggle />
-          <Avatar>
-            <AvatarImage src="/avatar.png" />
-            <AvatarFallback>TK</AvatarFallback>
-          </Avatar>
-        </div>
-      </header>
-      <main className="flex-1 p-10">{children}</main>
-      <footer className="shrink-0 border-t border-t-foreground h-10 flex justify-end items-center px-10">
-        <span className="text-xs">&copy; thek4in 2024</span>
-      </footer>
+      <Header />
+      <div className="flex-1 flex">
+        <Command className="w-[100rem] border-r border-border">
+          <CommandInput placeholder="Type a command or search..." />
+          <CommandList>
+            <CommandEmpty>No results found.</CommandEmpty>
+            <CommandGroup heading="Suggestions">
+              <CommandItem>Calendar</CommandItem>
+              <CommandItem>Search Emoji</CommandItem>
+              <CommandItem>Calculator</CommandItem>
+            </CommandGroup>
+            <CommandSeparator />
+            <CommandGroup heading="Settings">
+              <CommandItem>Profile</CommandItem>
+              <CommandItem>Billing</CommandItem>
+              <CommandItem>Settings</CommandItem>
+            </CommandGroup>
+          </CommandList>
+          <span>&copy; thek4in 2024</span>
+        </Command>
+        <main className="p-10">{children}</main>
+      </div>
     </>
   );
 }
